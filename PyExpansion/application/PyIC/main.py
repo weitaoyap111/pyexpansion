@@ -1,6 +1,6 @@
 from PyExpansion.common import utils, message
 from PyExpansion.application.PyIC import status_code_list
-from PyExpansion.application.PyIC.country import malaysia
+from PyExpansion.application.PyIC.country import Malaysia, Singapore
 
 
 class PyIC(utils.BaseClass):
@@ -12,7 +12,9 @@ class PyIC(utils.BaseClass):
 
     def _router(self):
         if self.country == "Malaysia":
-            return malaysia.PyIC(self.ic_word)
+            return Malaysia.PyIC(self.ic_word)
+        elif self.country == "Singapore":
+            return Singapore.PyIC(self.ic_word)
         else:
             return None
 
@@ -21,7 +23,7 @@ class PyIC(utils.BaseClass):
             return self._router().get_detail()
         else:
             self.error_code = status_code_list.error_code_1
-            return message.error_default_message(True)
+            return message.error_default_message(False)
 
     def check_error(self):
         if self._router():

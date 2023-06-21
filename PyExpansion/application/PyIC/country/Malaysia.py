@@ -7,12 +7,10 @@ from PyExpansion.application.PyIC import status_code_list
 
 class PyIC(base.PyICBase):
     country = "Malaysia"
-    ic_length = 12
-    separator = "-"
-    max_length_after_separator = 3
+    ic_pattern = "############"
 
     """
-    YYMMDD-PB-###G
+    YYMMDD PB ###G
 
     YY  - last 2 number of the year of birth
     MM  - number of month of birth
@@ -128,12 +126,12 @@ class PyIC(base.PyICBase):
     def get_detail(self):
         flag = True
         if not self.get_info():
-            return message.error_default_message(True)
+            return message.error_default_message(False)
         else:
             temp = self.get_info()
             birthday = temp[:6]
             pb_code = temp[6:8]
-            gender = temp[self.ic_length-1]
+            gender = temp[len(temp)-1]
 
         try:
             birthday = datetime.strptime(birthday, '%y%m%d').date()
@@ -141,13 +139,14 @@ class PyIC(base.PyICBase):
         except:
             flag = False
             self.error_code = status_code_list.error_code_M_1
+
         states = self.pb_code_list[pb_code]
         gender = "Male" if int(gender) % 2 == 1 else "Female"
 
         if flag:
             return {"birthday": birthday, "states": states, "gender": gender, "error": False}
         else:
-            return message.error_default_message(True)
+            return message.error_default_message(False)
 
     def get_birthday(self):
         return self.get_detail()["birthday"]

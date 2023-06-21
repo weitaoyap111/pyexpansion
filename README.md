@@ -15,12 +15,17 @@ How to install:
 pip install pyexpansion
 ```
 
-# Project status
-### Done
-1) PyIC
+# Library List:
+## 1) PyIC
+### What is this?
 - Python Script that extract the ic information from ic word.
-- Apply for Malaysia Only
 
-### Incoming
-1) PyCarPlate
-- Python Script that extract the car plate information from car plate.
+### How to use it?
+- You can refer to PyIC\tests.py.
+
+### Updated
+- Apply for Malaysia Only
+- Singapore Added
+
+# Author
+Copyright (c) 2023 Wei Tao Yap
