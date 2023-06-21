@@ -1,9 +1,11 @@
 Python script that suddenly come to my idea
 
-Will update more
+Will update more...
+
+How to install:
+pip install pyexpansion
 
 Project status
-
 ### Done
 1) PyIC
 - Python Script that extract the ic information from ic word.
