@@ -1,4 +1,4 @@
-from PyExpansion.application.PyIC import main
+from PyExpansion.application.human_resource.PyIC import main
 
 test_case_material = [
     {
@@ -51,5 +51,6 @@ for count, x in enumerate(test_case_material, start=1):
     if x.get("special", ""):
         print("This function", x["special"])
     if x["country"] == "Singapore":
-        print("Is Valid: ", main.Singapore.PyIC(x["ic_word"]).valid_ic())
+        print("Extra Function For Singapore")
+        print("Is IC Valid ?: ", main.Singapore.PyIC(x["ic_word"]).valid_ic())
     print("\n")

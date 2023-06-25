@@ -1,11 +1,11 @@
 from PyExpansion.common import message
-from PyExpansion.application.PyIC.country import base
-from PyExpansion.application.PyIC import status_code_list
+from PyExpansion.application.human_resource.PyIC.country import base
+from PyExpansion.application.human_resource.PyIC import status_code_list
 
 
 class PyIC(base.PyICBase):
     country = "Singapore"
-    ic_pattern = "C########"
+    word_pattern = "C########"
 
     """
     @xxxxxxx#
@@ -52,20 +52,20 @@ class PyIC(base.PyICBase):
     }
 
     def valid_ic(self):
-        choice = self.ic_word[0]
+        choice = self.word[0]
 
         # calc
         v_list = 0
         multiple_v = [2, 7, 6, 5, 4, 3, 2]
         for x in range(1, 8):
-            v_list += int(self.ic_word[x]) * multiple_v[x-1]
+            v_list += int(self.word[x]) * multiple_v[x-1]
 
         v_list = v_list % 11
 
         if choice == "S" or choice == "T":
-            return self.valid_list["1"][v_list] == self.ic_word[len(self.ic_word)-1]
+            return self.valid_list["1"][v_list] == self.word[len(self.word)-1]
         elif choice == "F" or choice == "G" or choice == "M":
-            return self.valid_list["0"][v_list] == self.ic_word[len(self.ic_word)-1]
+            return self.valid_list["0"][v_list] == self.word[len(self.word)-1]
         else:
             return None
 

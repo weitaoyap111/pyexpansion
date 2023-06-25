@@ -1,16 +1,16 @@
 from datetime import datetime
 
 from PyExpansion.common import message
-from PyExpansion.application.PyIC.country import base
-from PyExpansion.application.PyIC import status_code_list
+from PyExpansion.application.human_resource.PyIC import status_code_list
+from PyExpansion.application.human_resource.PyIC.country import base
 
 
 class PyIC(base.PyICBase):
     country = "Malaysia"
-    ic_pattern = "############"
+    word_pattern = "############"
 
     """
-    YYMMDD PB ###G
+    YYMMDDPB###G
 
     YY  - last 2 number of the year of birth
     MM  - number of month of birth

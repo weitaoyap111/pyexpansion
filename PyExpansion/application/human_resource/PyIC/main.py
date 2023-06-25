@@ -1,9 +1,10 @@
 from PyExpansion.common import utils, message
-from PyExpansion.application.PyIC import status_code_list
-from PyExpansion.application.PyIC.country import Malaysia, Singapore
+from PyExpansion.application.human_resource.PyIC import status_code_list
+from PyExpansion.application.human_resource.PyIC.country import Malaysia, Singapore
 
 
-class PyIC(utils.BaseClass):
+class PyIC(utils.ErrorBase):
+    code_list = status_code_list.code_list
 
     def __init__(self, country, ic_word):
         self.country = country
@@ -29,4 +30,4 @@ class PyIC(utils.BaseClass):
         if self._router():
             return self._router().check_error()
         else:
-            return utils.BaseClass.check_error(self)
+            return utils.ErrorBase.check_error(self)
