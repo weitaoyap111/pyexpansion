@@ -46,13 +46,6 @@ class BrainFuck(object):
                 return False
         return True
 
-    def check_value(self, min_v=0, max_v=255):
-        value = self._array[self._ptr]
-        if value > max_v:
-            self._array[self._ptr] = min_v
-        if value < min_v:
-            self._array[self._ptr] = max_v
-
     def _inc_ptr(self, inc_v=1):
         self._ptr += inc_v
         if self._ptr > len(self._array) - 1:
@@ -65,28 +58,28 @@ class BrainFuck(object):
 
     def _inc_ptr_v(self, inc_v=1):
         self._array[self._ptr] += inc_v
-        self.check_value()
+        self._check_value()
 
     def _dec_ptr_v(self, dec_v=1):
         self._array[self._ptr] -= dec_v
-        self.check_value()
+        self._check_value()
 
-    def print_out(self, return_data=False):
+    def _print_out(self, return_data=False):
         if not return_data:
             print(chr(self._array[self._ptr]), end="")
         self._result_list.append(chr(self._array[self._ptr]))
 
-    def read_input(self):
+    def _read_input(self):
         if not self._user_input:
             self._user_input = list(input("Your Input: "))
         self._array[self._ptr] = ord(self._user_input.pop(0))
 
-    def left_loop(self, count):
+    def _left_loop(self, count):
         if not self._array[self._ptr]:
             count = self._loop_table[count]
         return count
 
-    def right_loop(self, count):
+    def _right_loop(self, count):
         if self._array[self._ptr]:
             count = self._loop_table[count]
         return count
@@ -112,13 +105,13 @@ class BrainFuck(object):
             elif x == "<":
                 self._dec_ptr()
             elif x == ".":
-                self.print_out(return_data)
+                self._print_out(return_data)
             elif x == ",":
-                self.read_input()
+                self._read_input()
             elif x == "[":
-                count = self.left_loop(count)
+                count = self._left_loop(count)
             elif x == "]":
-                count = self.right_loop(count)
+                count = self._right_loop(count)
 
             count += 1
 
@@ -152,6 +145,13 @@ class BrainFuck(object):
             output_list.append(word)
 
         return output_list
+
+    def _check_value(self, min_v=0, max_v=255):
+        value = self._array[self._ptr]
+        if value > max_v:
+            self._array[self._ptr] = min_v
+        if value < min_v:
+            self._array[self._ptr] = max_v
 
     def word_to_bf(self, data, return_data=False):
         if self._verify_encode(data):

@@ -2,3 +2,4 @@
 dist/*
 PyExpansion.egg-info/*
 *.pyc
+undone/

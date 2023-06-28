@@ -22,9 +22,21 @@ class PyICVersionHistory(version_history.VersionHistoryBase):
             version="0.0.1a20230624",
         )
 
+    def version_4(self):
+        return self.default_setup(
+            application_name="PyMorseCode",
+            version="0.0.1a20230626",
+        )
+
+    def version_5(self):
+        return self.default_setup(
+            application_name="common",
+            version="0.0.1a20230628"
+        )
+
 
 c = PyICVersionHistory()
-test = True
+test = False
 if test:
     print("How many version:", c.total_version())
     print("Version list:", c.get_version_list())

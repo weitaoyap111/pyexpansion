@@ -15,7 +15,18 @@ How to install:
 pip install pyexpansion
 ```
 
-# Library List:
+# Author
+Copyright (c) 2023 Wei Tao Yap
+
+# Projects Status
+### Updated
+1) PyIC
+- Apply for Malaysia Only
+- Singapore Added
+2) PyBrainFuck is added
+3) PyMorseCode is added
+
+# Library Added:
 ## 1) PyIC
 ### What is this?
 - Python Script that extract the ic information from ic word.
@@ -36,11 +47,12 @@ you can read at PyIC\README.md
 ### Want knows more? 
 you can read at PyBrainFuck\README.md
 
-# Projects Status
-### Updated
-- Apply for Malaysia Only
-- Singapore Added
-- PyBrainFuck is added
+## 3) PyMorseCode
+### What is this?
+- Python Script that decode and encode using Morse Code.
 
-# Author
-Copyright (c) 2023 Wei Tao Yap
+### How to use it?
+- You can refer to PyMorseCode\tests.py.
+
+### Want knows more? 
+you can read at PyMorseCode\README.md
