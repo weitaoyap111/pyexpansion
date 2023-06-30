@@ -34,6 +34,12 @@ class PyICVersionHistory(version_history.VersionHistoryBase):
             version="0.0.1a20230628"
         )
 
+    def version_6(self):
+        return self.default_setup(
+            application_name="PyDeadFish",
+            version="0.0.1a20230630"
+        )
+
 
 c = PyICVersionHistory()
 test = False
