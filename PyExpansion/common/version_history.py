@@ -14,7 +14,7 @@ class VersionHistoryBase(object):
     """
     _length_of_date = 8
 
-    _list_version = []
+    list_version = []
 
     def __init__(self):
         self._update_all()
@@ -38,16 +38,16 @@ class VersionHistoryBase(object):
 
         for x in function_found_lists_v:
             if basic_function.check_function_exist(self, x):
-                self._list_version.append(getattr(self, x)())
+                self.list_version.append(getattr(self, x)())
 
     def total_version(self):
-        return len(self._list_version)
+        return len(self.list_version)
 
     def get_latest_version(self):
-        return self._list_version[-1]["version"]
+        return self.list_version[-1]["version"]
 
     def get_version_list(self):
-        return self._list_version
+        return self.list_version
 
     def get_version_info(self, version=None):
         if not version:
@@ -71,4 +71,4 @@ class VersionHistoryBase(object):
 
     def write_or_update_version_file(self):
         with open("version.json", "w") as outfile:
-            json.dump(self._list_version, outfile)
+            json.dump(self.list_version, outfile)

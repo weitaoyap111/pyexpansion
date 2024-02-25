@@ -8,7 +8,7 @@ class MathBaseTable(table.BaseTable):
         self.col = col
         self.size = self.row * self.col
 
-    def larget_space(self):
+    def large_space(self):
         return str(len(str(self.operation(self.row, self.col))) + 1)
 
     def create_table(self, row_no=0, column_no=0, exclude_list=None):

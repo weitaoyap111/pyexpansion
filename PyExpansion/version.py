@@ -1,7 +1,7 @@
 from PyExpansion.common import version_history
 
 
-class PyICVersionHistory(version_history.VersionHistoryBase):
+class PyExpansionVersionHistory(version_history.VersionHistoryBase):
 
     def version_1(self):
         return self.default_setup(
@@ -40,8 +40,14 @@ class PyICVersionHistory(version_history.VersionHistoryBase):
             version="0.0.1a20230630"
         )
 
+    def version_7(self):
+        return self.default_setup(
+            application_name="common",
+            version="0.0.1a20240225"
+        )
 
-c = PyICVersionHistory()
+
+c = PyExpansionVersionHistory()
 test = False
 if test:
     print("How many version:", c.total_version())

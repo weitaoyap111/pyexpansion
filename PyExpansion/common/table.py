@@ -1,6 +1,6 @@
 class BaseTable:
 
-    def larget_space(self, *args, **kwargs):
+    def large_space(self, *args, **kwargs):
         data = self.create_table()
         max_len = 0
         for x in data:
@@ -12,7 +12,7 @@ class BaseTable:
         return []
 
     def print_out(self, *args, **kwargs):
-        space = self.larget_space()
+        space = self.large_space()
         end = kwargs.get("end", " ")
         table_data = self.create_table()
         for row in table_data:

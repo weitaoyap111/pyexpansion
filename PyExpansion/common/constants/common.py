@@ -1,3 +1,6 @@
-symbol_list = "[@_!#$%^&*()<>?/\\|}{~:]"  # use for symbol check
-capital_abc_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-lower_abc_list = capital_abc_list.lower()
+SYMBOL = "[@_!#$%^&*()<>?/\\|}{~:]"  # use for symbol check
+CAPITAL_ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+NUMBER = "0123456789"
+LOWER_ABC = CAPITAL_ABC.lower()
+FULL_ABC = CAPITAL_ABC + LOWER_ABC
+ALPHANUMERIC = FULL_ABC + NUMBER

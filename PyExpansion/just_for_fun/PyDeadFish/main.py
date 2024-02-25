@@ -6,10 +6,10 @@ class DeadFish(object):
     o - output
     """
 
-    inital_value = 0
+    initial_value = 0
 
     def _reset(self):
-        self.inital_value = 0
+        self.initial_value = 0
 
     def _verify(self, words):
         for word in words:
@@ -18,23 +18,23 @@ class DeadFish(object):
         return True
 
     def _check(self):
-        if self.inital_value > 255 or self.inital_value < 0:
-            self.inital_value = 0
+        if self.initial_value > 255 or self.initial_value < 0:
+            self.initial_value = 0
 
     def i_f(self):
-        self.inital_value += 1
+        self.initial_value += 1
         self._check()
 
     def d_f(self):
-        self.inital_value -= 1
+        self.initial_value -= 1
         self._check()
 
     def s_f(self):
-        self.inital_value *= self.inital_value
+        self.initial_value *= self.initial_value
         self._check()
 
     def o_f(self):
-        print(chr(self.inital_value), end="")
+        print(chr(self.initial_value), end="")
 
     def _decode(self, words):
         self._reset()

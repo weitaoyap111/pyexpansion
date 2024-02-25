@@ -67,8 +67,8 @@ class PatternClass(ErrorBase):
     """
     allow_character_in_pattern = "Aa#S"
     word_pattern = ""  # word pattern, example: AA##AAS
-    symbol_list = constants_common.symbol_list  # use for symbol check
-    abc_list = constants_common.capital_abc_list
+    symbol_list = constants_common.SYMBOL  # use for symbol check
+    abc_list = constants_common.CAPITAL_ABC
     bcode_list = code_list
 
     def __init__(self, word: str):
@@ -102,3 +102,16 @@ class PatternClass(ErrorBase):
                 return None
             else:
                 return self.word
+
+
+class GeneralUtils(object):
+
+    @staticmethod
+    def return_msg(is_success=True, message="", info=None):
+        """
+        :param is_success: Success or fail
+        :param message: error message if false else ""
+        :param info: display information needed
+        :return:
+        """
+        return is_success, message, info

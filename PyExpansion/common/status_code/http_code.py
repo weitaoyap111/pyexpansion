@@ -3,11 +3,11 @@ HTTP_101 = {"101": "Switching Protocols"}
 HTTP_102 = {"102": "Processing"}
 HTTP_103 = {"103": "Early Hints"}
 
-HTTP_1xx_official = dict()
-HTTP_1xx_official.update(HTTP_100)
-HTTP_1xx_official.update(HTTP_101)
-HTTP_1xx_official.update(HTTP_102)
-HTTP_1xx_official.update(HTTP_103)
+HTTP_1xx_OFFICIAL = dict()
+HTTP_1xx_OFFICIAL.update(HTTP_100)
+HTTP_1xx_OFFICIAL.update(HTTP_101)
+HTTP_1xx_OFFICIAL.update(HTTP_102)
+HTTP_1xx_OFFICIAL.update(HTTP_103)
 
 HTTP_200 = {"200": "OK"}
 HTTP_201 = {"201": "Created"}
@@ -20,17 +20,17 @@ HTTP_207 = {"207": "Multi-Status"}
 HTTP_208 = {"208": "Already Reported"}
 HTTP_226 = {"226": "IM Used"}
 
-HTTP_2xx_official = dict()
-HTTP_2xx_official.update(HTTP_200)
-HTTP_2xx_official.update(HTTP_201)
-HTTP_2xx_official.update(HTTP_202)
-HTTP_2xx_official.update(HTTP_203)
-HTTP_2xx_official.update(HTTP_204)
-HTTP_2xx_official.update(HTTP_205)
-HTTP_2xx_official.update(HTTP_206)
-HTTP_2xx_official.update(HTTP_207)
-HTTP_2xx_official.update(HTTP_208)
-HTTP_2xx_official.update(HTTP_226)
+HTTP_2xx_OFFICIAL = dict()
+HTTP_2xx_OFFICIAL.update(HTTP_200)
+HTTP_2xx_OFFICIAL.update(HTTP_201)
+HTTP_2xx_OFFICIAL.update(HTTP_202)
+HTTP_2xx_OFFICIAL.update(HTTP_203)
+HTTP_2xx_OFFICIAL.update(HTTP_204)
+HTTP_2xx_OFFICIAL.update(HTTP_205)
+HTTP_2xx_OFFICIAL.update(HTTP_206)
+HTTP_2xx_OFFICIAL.update(HTTP_207)
+HTTP_2xx_OFFICIAL.update(HTTP_208)
+HTTP_2xx_OFFICIAL.update(HTTP_226)
 
 HTTP_300 = {"300": "Multiple Choices"}
 HTTP_301 = {"301": "Moved Permanently"}
@@ -42,16 +42,16 @@ HTTP_306 = {"306": "Switch Proxy"}
 HTTP_307 = {"307": "Temporary Redirect"}
 HTTP_308 = {"308": "Permanent Redirect"}
 
-HTTP_3xx_official = dict()
-HTTP_3xx_official.update(HTTP_300)
-HTTP_3xx_official.update(HTTP_301)
-HTTP_3xx_official.update(HTTP_302)
-HTTP_3xx_official.update(HTTP_303)
-HTTP_3xx_official.update(HTTP_304)
-HTTP_3xx_official.update(HTTP_305)
-HTTP_3xx_official.update(HTTP_306)
-HTTP_3xx_official.update(HTTP_307)
-HTTP_3xx_official.update(HTTP_308)
+HTTP_3xx_OFFICIAL = dict()
+HTTP_3xx_OFFICIAL.update(HTTP_300)
+HTTP_3xx_OFFICIAL.update(HTTP_301)
+HTTP_3xx_OFFICIAL.update(HTTP_302)
+HTTP_3xx_OFFICIAL.update(HTTP_303)
+HTTP_3xx_OFFICIAL.update(HTTP_304)
+HTTP_3xx_OFFICIAL.update(HTTP_305)
+HTTP_3xx_OFFICIAL.update(HTTP_306)
+HTTP_3xx_OFFICIAL.update(HTTP_307)
+HTTP_3xx_OFFICIAL.update(HTTP_308)
 
 HTTP_400 = {"400": "Bad Request"}
 HTTP_401 = {"401": "Unauthorized"}
@@ -83,36 +83,36 @@ HTTP_429 = {"429": "Too Many Requests"}
 HTTP_431 = {"431": "Request Header Fields Too Large"}
 HTTP_451 = {"451": "Unavailable For Legal Reasons"}
 
-HTTP_4xx_official = dict()
-HTTP_4xx_official.update(HTTP_400)
-HTTP_4xx_official.update(HTTP_401)
-HTTP_4xx_official.update(HTTP_402)
-HTTP_4xx_official.update(HTTP_403)
-HTTP_4xx_official.update(HTTP_404)
-HTTP_4xx_official.update(HTTP_405)
-HTTP_4xx_official.update(HTTP_406)
-HTTP_4xx_official.update(HTTP_407)
-HTTP_4xx_official.update(HTTP_408)
-HTTP_4xx_official.update(HTTP_409)
-HTTP_4xx_official.update(HTTP_410)
-HTTP_4xx_official.update(HTTP_411)
-HTTP_4xx_official.update(HTTP_412)
-HTTP_4xx_official.update(HTTP_413)
-HTTP_4xx_official.update(HTTP_414)
-HTTP_4xx_official.update(HTTP_415)
-HTTP_4xx_official.update(HTTP_416)
-HTTP_4xx_official.update(HTTP_417)
-HTTP_4xx_official.update(HTTP_418)
-HTTP_4xx_official.update(HTTP_421)
-HTTP_4xx_official.update(HTTP_422)
-HTTP_4xx_official.update(HTTP_423)
-HTTP_4xx_official.update(HTTP_424)
-HTTP_4xx_official.update(HTTP_425)
-HTTP_4xx_official.update(HTTP_426)
-HTTP_4xx_official.update(HTTP_428)
-HTTP_4xx_official.update(HTTP_429)
-HTTP_4xx_official.update(HTTP_431)
-HTTP_4xx_official.update(HTTP_451)
+HTTP_4xx_OFFICIAL = dict()
+HTTP_4xx_OFFICIAL.update(HTTP_400)
+HTTP_4xx_OFFICIAL.update(HTTP_401)
+HTTP_4xx_OFFICIAL.update(HTTP_402)
+HTTP_4xx_OFFICIAL.update(HTTP_403)
+HTTP_4xx_OFFICIAL.update(HTTP_404)
+HTTP_4xx_OFFICIAL.update(HTTP_405)
+HTTP_4xx_OFFICIAL.update(HTTP_406)
+HTTP_4xx_OFFICIAL.update(HTTP_407)
+HTTP_4xx_OFFICIAL.update(HTTP_408)
+HTTP_4xx_OFFICIAL.update(HTTP_409)
+HTTP_4xx_OFFICIAL.update(HTTP_410)
+HTTP_4xx_OFFICIAL.update(HTTP_411)
+HTTP_4xx_OFFICIAL.update(HTTP_412)
+HTTP_4xx_OFFICIAL.update(HTTP_413)
+HTTP_4xx_OFFICIAL.update(HTTP_414)
+HTTP_4xx_OFFICIAL.update(HTTP_415)
+HTTP_4xx_OFFICIAL.update(HTTP_416)
+HTTP_4xx_OFFICIAL.update(HTTP_417)
+HTTP_4xx_OFFICIAL.update(HTTP_418)
+HTTP_4xx_OFFICIAL.update(HTTP_421)
+HTTP_4xx_OFFICIAL.update(HTTP_422)
+HTTP_4xx_OFFICIAL.update(HTTP_423)
+HTTP_4xx_OFFICIAL.update(HTTP_424)
+HTTP_4xx_OFFICIAL.update(HTTP_425)
+HTTP_4xx_OFFICIAL.update(HTTP_426)
+HTTP_4xx_OFFICIAL.update(HTTP_428)
+HTTP_4xx_OFFICIAL.update(HTTP_429)
+HTTP_4xx_OFFICIAL.update(HTTP_431)
+HTTP_4xx_OFFICIAL.update(HTTP_451)
 
 HTTP_500 = {"500": "Server Internal Error"}
 HTTP_501 = {"501": "Not Implemented"}
@@ -126,25 +126,25 @@ HTTP_508 = {"508": "Loop Detected"}
 HTTP_510 = {"510": "Not Extended"}
 HTTP_511 = {"511": "Network Authentication Required"}
 
-HTTP_5xx_official = dict()
-HTTP_5xx_official.update(HTTP_500)
-HTTP_5xx_official.update(HTTP_501)
-HTTP_5xx_official.update(HTTP_502)
-HTTP_5xx_official.update(HTTP_503)
-HTTP_5xx_official.update(HTTP_504)
-HTTP_5xx_official.update(HTTP_505)
-HTTP_5xx_official.update(HTTP_506)
-HTTP_5xx_official.update(HTTP_507)
-HTTP_5xx_official.update(HTTP_508)
-HTTP_5xx_official.update(HTTP_510)
-HTTP_5xx_official.update(HTTP_511)
+HTTP_5xx_OFFICIAL = dict()
+HTTP_5xx_OFFICIAL.update(HTTP_500)
+HTTP_5xx_OFFICIAL.update(HTTP_501)
+HTTP_5xx_OFFICIAL.update(HTTP_502)
+HTTP_5xx_OFFICIAL.update(HTTP_503)
+HTTP_5xx_OFFICIAL.update(HTTP_504)
+HTTP_5xx_OFFICIAL.update(HTTP_505)
+HTTP_5xx_OFFICIAL.update(HTTP_506)
+HTTP_5xx_OFFICIAL.update(HTTP_507)
+HTTP_5xx_OFFICIAL.update(HTTP_508)
+HTTP_5xx_OFFICIAL.update(HTTP_510)
+HTTP_5xx_OFFICIAL.update(HTTP_511)
 
 HTTP_STANDARD = dict()
-HTTP_STANDARD.update(HTTP_1xx_official)
-HTTP_STANDARD.update(HTTP_2xx_official)
-HTTP_STANDARD.update(HTTP_3xx_official)
-HTTP_STANDARD.update(HTTP_4xx_official)
-HTTP_STANDARD.update(HTTP_5xx_official)
+HTTP_STANDARD.update(HTTP_1xx_OFFICIAL)
+HTTP_STANDARD.update(HTTP_2xx_OFFICIAL)
+HTTP_STANDARD.update(HTTP_3xx_OFFICIAL)
+HTTP_STANDARD.update(HTTP_4xx_OFFICIAL)
+HTTP_STANDARD.update(HTTP_5xx_OFFICIAL)
 
 HTTP_419 = {"419": "Page Expired (Laravel Framework)"}
 HTTP_420 = {"420": "Method Failure (Spring Framework)"}

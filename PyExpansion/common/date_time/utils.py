@@ -10,6 +10,6 @@ def convert_day_to_readable_date(number_of_days):
     left *= constants_datetime.s_minute_in_a_hour
     minutes = int(left - (left % 1))
     left = left % 1
-    left *= constants_datetime.s_secondy_in_a_minute
+    left *= constants_datetime.s_second_in_a_minute
     seconds = int(left - (left % 1))
     return days, hours, minutes, seconds
