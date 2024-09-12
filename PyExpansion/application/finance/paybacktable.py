@@ -56,8 +56,7 @@ class MoneyBorrowAndPay(table.BaseTable):
         print("Adjustment: ", utils.currency_represent(self.adjustment, currency_symbol=self.currency_symbol))
 
 
-test_MoneyBorrowAndPay = True
-if test_MoneyBorrowAndPay:
+if __name__ == "__main__":
     c = MoneyBorrowAndPay(5000, 24, 2)
     print("Total Pay: ", c.get_total_pay())
     print("Pay Per Month: ", c.pay_by_month())

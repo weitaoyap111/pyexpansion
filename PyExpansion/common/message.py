@@ -1,5 +1,3 @@
-from .status_code import utils
-
 
 def return_response(code: int, message: str, info=None):
     return {"code": code, "message": message, "info": info}
@@ -19,7 +17,7 @@ def return_response_with_code_list(code: str, list_code=None, info=None):
     return_data = dict()
     return_data.update({"code": code})
     return_data.update(error_default_message(True) if info else error_default_message(False))
-    return_data.update({"message": utils.get_code_description(code, list_code)})
+    return_data.update({"message": list_code[code]})
     return_data.update({"info": info})
     return return_data
 

@@ -3,12 +3,19 @@ from PyExpansion.common import table
 
 class MathBaseTable(table.BaseTable):
 
+    symbol = ""
+
     def __init__(self, row, col):
+        self._check_symbol()
         self.row = row
         self.col = col
         self.size = self.row * self.col
 
-    def large_space(self):
+    def _check_symbol(self):
+        if not self.symbol:
+            raise Exception("symbol must be set")
+
+    def _large_space(self):
         return str(len(str(self.operation(self.row, self.col))) + 1)
 
     def create_table(self, row_no=0, column_no=0, exclude_list=None):
@@ -16,8 +23,8 @@ class MathBaseTable(table.BaseTable):
             row_no = self.row
         if not column_no:
             column_no = self.col
-        data_x = [x for x in range(1, column_no + 1)]
-        data_y = [y for y in range(1, row_no + 1)]
+        data_x = [x for x in range(0, column_no + 1)]
+        data_y = [y for y in range(0, row_no + 1)]
         new_data = list()
         for count, y in enumerate(data_y):
             temp = []
@@ -32,7 +39,7 @@ class MathBaseTable(table.BaseTable):
 
                 if not break_flag:
                     if count == 0 and count2 == 0:
-                        temp.append(1)
+                        temp.append(self.symbol)
                     if count == 0 and count2 > 0:
                         temp.append(x)
                     if count > 0 and count2 == 0:
@@ -47,24 +54,27 @@ class MathBaseTable(table.BaseTable):
 
 
 class AdditionTable(MathBaseTable):
+    symbol = "+"
 
     def operation(self, a, b):
         return a + b
 
 
 class MultiplicationTable(MathBaseTable):
+    symbol = "x"
 
     def operation(self, a, b):
         return a * b
 
 
 class SquareTable(MathBaseTable):
+    symbol = "2"
 
     def operation(self, a, b):
         return a ** b
 
 
-# Table
-# AdditionTable(10, 10).print_out()
-# MultiplicationTable(10, 10).print_out()
-# SquareTable(10, 10).print_out()
+if __name__ == "__main__":
+    AdditionTable(10, 10).print_out()
+    MultiplicationTable(10, 10).print_out()
+    SquareTable(10, 10).print_out()

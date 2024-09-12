@@ -1,4 +1,3 @@
-from .status_code import utils as http_code_utils
 from .constants import common as constants_common
 
 front_pattern = "C_U_"
@@ -34,7 +33,7 @@ class ErrorBase(object):
         return_data = dict()
         if self.error_code:
             return_data.update({"Error Code": self.error_code})
-            return_data.update({"Error Message": http_code_utils.get_code_description(self.error_code, self.code_list)})
+            return_data.update({"Error Message": self.code_list[self.error_code]})
         if self.correct_code:
             return_data.update({"Correct Code": self.correct_code})
         return return_data
@@ -42,14 +41,14 @@ class ErrorBase(object):
     """
     main core to verify function
     """
-    def _verify(self):
+    def verify(self):
         return None
 
     """
     main function to get value from _verify function
     """
     def get_info(self):
-        return self._verify()
+        return self.verify()
 
     """
     main function to process data
@@ -67,7 +66,7 @@ class PatternClass(ErrorBase):
     """
     allow_character_in_pattern = "Aa#S"
     word_pattern = ""  # word pattern, example: AA##AAS
-    symbol_list = constants_common.SYMBOL  # use for symbol check
+    symbol_list = constants_common.SPECIAL_SYMBOL  # use for symbol check
     abc_list = constants_common.CAPITAL_ABC
     bcode_list = code_list
 

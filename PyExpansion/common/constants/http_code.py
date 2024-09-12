@@ -1,3 +1,7 @@
+
+# data source from wikipedia
+# https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
 HTTP_100 = {"100": "Continue"}
 HTTP_101 = {"101": "Switching Protocols"}
 HTTP_102 = {"102": "Processing"}
@@ -147,15 +151,15 @@ HTTP_STANDARD.update(HTTP_4xx_OFFICIAL)
 HTTP_STANDARD.update(HTTP_5xx_OFFICIAL)
 
 HTTP_419 = {"419": "Page Expired (Laravel Framework)"}
-HTTP_420 = {"420": "Method Failure (Spring Framework)"}
-# HTTP_420 = {"420": "Enhance Your Calm (Twitter)"}
+HTTP_420_1 = {"420": "Method Failure (Spring Framework)"}
+HTTP_420_2 = {"420": "Enhance Your Calm (Twitter)"}
 HTTP_430 = {"430": "Request Header Fields Too Large (Shopify)"}
 HTTP_450 = {"450": "Blocked by Windows Parental Controls (Microsoft)"}
 HTTP_498 = {"498": "Invalid Token (Esri)"}
-HTTP_499 = {"499": "Token Required (Esri)"}
+HTTP_499_1 = {"499": "Token Required (Esri)"}
 HTTP_509 = {"509": "Bandwidth Limit Exceeded (Apache Web Server/cPanel)"}
 HTTP_529 = {"529": "Site is overloaded (Qualys)"}
-HTTP_530 = {"530": "Site is frozen (Pantheon Systems)"}
+HTTP_530_1 = {"530": "Site is frozen (Pantheon Systems)"}
 HTTP_598 = {"598": "(Informal convention) Network read timeout error"}
 HTTP_599 = {"599": "Network Connect Timeout Error"}
 HTTP_440 = {"440": "Login Time-out (IIS)"}
@@ -166,7 +170,7 @@ HTTP_494 = {"494": "Request header too large (nginx)"}
 HTTP_495 = {"495": "SSL Certificate Error (nginx)"}
 HTTP_496 = {"496": "SSL Certificate Required (nginx)"}
 HTTP_497 = {"497": "HTTP Request Sent to HTTPS Port (nginx)"}
-# HTTP_499 = {"499": "Client Closed Request"}
+HTTP_499_2 = {"499": "Client Closed Request"}
 HTTP_520 = {"520": "Web Server Returned an Unknown Error (Cloudflare)"}
 HTTP_521 = {"521": "Web Server Is Down (Cloudflare)"}
 HTTP_522 = {"522": "Connection Timed Out (Cloudflare)"}
@@ -175,7 +179,7 @@ HTTP_524 = {"524": "A Timeout Occurred (Cloudflare)"}
 HTTP_525 = {"525": "SSL Handshake Failed (Cloudflare)"}
 HTTP_526 = {"526": "Invalid SSL Certificate (Cloudflare)"}
 HTTP_527 = {"527": "Railgun Error (Cloudflare)"}
-# HTTP_530 = {"530": "returned along with a 1xxx error (Cloudflare)"}
+HTTP_530_2 = {"530": "returned along with a 1xxx error (Cloudflare)"}
 HTTP_460 = {"460": "Client closed the connection with the load balancer before the idle timeout period elapsed. (AWS)"}
 HTTP_463 = {"463": "The load balancer received an X-Forwarded-For request header with more than 30 IP addresses. (AWS)"}
 HTTP_464 = {"464": "Incompatible protocol versions between Client and Origin server. (AWS)"}
@@ -190,15 +194,15 @@ HTTP_299 = {"299": "Miscellaneous Persistent Warning"}
 
 HTTP_NOT_STANDARD = dict()
 HTTP_NOT_STANDARD.update(HTTP_419)
-HTTP_NOT_STANDARD.update(HTTP_420)
-# HTTP_420 = {"420": "Enhance Your Calm (Twitter)"}
+HTTP_NOT_STANDARD.update(HTTP_420_1)
+HTTP_NOT_STANDARD.update(HTTP_420_2)
 HTTP_NOT_STANDARD.update(HTTP_430)
 HTTP_NOT_STANDARD.update(HTTP_450)
 HTTP_NOT_STANDARD.update(HTTP_498)
-HTTP_NOT_STANDARD.update(HTTP_499)
+HTTP_NOT_STANDARD.update(HTTP_499_1)
 HTTP_NOT_STANDARD.update(HTTP_509)
 HTTP_NOT_STANDARD.update(HTTP_529)
-HTTP_NOT_STANDARD.update(HTTP_530)
+HTTP_NOT_STANDARD.update(HTTP_530_1)
 HTTP_NOT_STANDARD.update(HTTP_598)
 HTTP_NOT_STANDARD.update(HTTP_599)
 HTTP_NOT_STANDARD.update(HTTP_440)
@@ -209,7 +213,7 @@ HTTP_NOT_STANDARD.update(HTTP_494)
 HTTP_NOT_STANDARD.update(HTTP_495)
 HTTP_NOT_STANDARD.update(HTTP_496)
 HTTP_NOT_STANDARD.update(HTTP_497)
-# HTTP_499 = {"499": "Client Closed Request"}
+HTTP_NOT_STANDARD.update(HTTP_499_2)
 HTTP_NOT_STANDARD.update(HTTP_520)
 HTTP_NOT_STANDARD.update(HTTP_521)
 HTTP_NOT_STANDARD.update(HTTP_522)
@@ -218,7 +222,7 @@ HTTP_NOT_STANDARD.update(HTTP_524)
 HTTP_NOT_STANDARD.update(HTTP_525)
 HTTP_NOT_STANDARD.update(HTTP_526)
 HTTP_NOT_STANDARD.update(HTTP_527)
-# HTTP_530 = {"530": "returned along with a 1xxx error (Cloudflare)"}
+HTTP_NOT_STANDARD.update(HTTP_530_2)
 HTTP_NOT_STANDARD.update(HTTP_460)
 HTTP_NOT_STANDARD.update(HTTP_463)
 HTTP_NOT_STANDARD.update(HTTP_464)
@@ -230,3 +234,6 @@ HTTP_NOT_STANDARD.update(HTTP_113)
 HTTP_NOT_STANDARD.update(HTTP_199)
 HTTP_NOT_STANDARD.update(HTTP_214)
 HTTP_NOT_STANDARD.update(HTTP_299)
+
+HTTP_ALL = HTTP_STANDARD
+HTTP_ALL.update(HTTP_NOT_STANDARD)

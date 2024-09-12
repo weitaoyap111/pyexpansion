@@ -20,9 +20,9 @@ Copyright (c) 2023 Wei Tao Yap
 
 # Projects Status
 ### Updated
-1) PyIC
-- Apply for Malaysia Only
-- Singapore Added
+1) PyIC <br>
+-> Malaysia Added <br>
+-> Singapore Added
 2) PyBrainFuck is added
 3) PyMorseCode is added
 

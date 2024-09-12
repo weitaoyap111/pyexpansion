@@ -48,11 +48,12 @@ class PyExpansionVersionHistory(version_history.VersionHistoryBase):
 
 
 c = PyExpansionVersionHistory()
-test = False
-if test:
+version = c.get_latest_version()
+
+if __name__ == "__main":
+    pass
     print("How many version:", c.total_version())
     print("Version list:", c.get_version_list())
     print("Latest version: ", c.get_latest_version())
     print("Last version information: ", c.get_version_info(c.get_latest_version()))
 
-version = c.get_latest_version()

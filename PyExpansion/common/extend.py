@@ -80,7 +80,7 @@ class ListExpand(list):
         for x in range(max_length):
             if self.iterable[max_length-x-1] == max_value:
                 self.iterable[max_length-x-1] = start
-                if(max_length-x-2) >= 0:
+                if (max_length-x-2) >= 0:
                     self.iterable[max_length-x-2] += 1
                 else:
                     self.iterable.insert(0, 1)

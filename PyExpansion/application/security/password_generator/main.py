@@ -22,7 +22,7 @@ class PasswordGenerator(object):
         if self.include_number:
             password_template += common.NUMBER
         if self.include_symbol:
-            password_template += common.SYMBOL
+            password_template += common.SPECIAL_SYMBOL
 
         password = ''.join([random.choice(password_template) for i in range(self.length)])
         return password

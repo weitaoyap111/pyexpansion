@@ -11,8 +11,9 @@ setup(
     package_dir={
         "common": "common",
         "application": "application",
+        "just_for_fun": "just_for_fun",
     },
-    packages=find_packages(exclude=["undone"]),
+    packages=find_packages(exclude=["pending"]),
     python_requires=">=3",
     long_description=long_description,
     long_description_content_type='text/markdown'
